@@ -1,0 +1,11 @@
+from flask import Flask, render_template,redirect,request,session
+from flask import current_app as app
+
+@app.route("/login", methods=["POST"])
+def login():
+  if request.method == "POST":
+        pwd = request.form.get("password")
+        email = request.form.get("email")
+        
+
+  return redirect('/user_dashboard')
