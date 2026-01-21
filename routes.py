@@ -9,3 +9,11 @@ def login():
         
 
   return redirect('/user_dashboard')
+
+@app.route("/dashboard", methods=["GET","POST"])
+
+def dashboard():
+
+  if request.method == "GET":
+
+      return "<p> this is your dashboard</p>"
