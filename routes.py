@@ -6,6 +6,19 @@ def login():
   if request.method == "POST":
         pwd = request.form.get("password")
         email = request.form.get("email")
-        
+
 
   return redirect('/user_dashboard')
+
+@app.route("/register", methods=["POST"])
+
+def login():
+
+  if request.method == "POST":
+
+        pwd = request.form.get("password")
+
+        email = request.form.get("email")
+
+        fullname= request.form.get("fullname")
+  return redirect('/login')
